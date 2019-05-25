@@ -4,9 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>这个网站不存在</title>
+    <style>
+        .no-found {
+            color: #333;
+            padding: 160px;
+            font-size: 20px;
+            text-align: center;
+        }
+    </style>
 </head>
 <body>
-    这个页面找不到了
+    <div id="text" class="no-found">这个网站不存在，即将跳转到主站...</div>
+    
+    <script>
+        window.onload = function () {
+            setTimeout(function () {
+                location.href = 'https://www.yunser.com/'
+            }, 2 * 1000)
+        }
+        document.getElementById('text').addEventListener('click', function () {
+            window.open('https://project.yunser.com/products/f5f1bc107ec811e98a70252c1dea0377', '_blank')
+        })
+    </script>
 </body>
 </html>
